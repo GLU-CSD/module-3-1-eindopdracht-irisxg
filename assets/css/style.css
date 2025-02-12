@@ -2,3 +2,104 @@
   padding:0;
   margin:0;
 }
+
+
+body {
+  background-image: url(../img//GT3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+
+.header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 20px;
+  background-color: #000; 
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease-in-out;
+}
+
+
+
+.logo img {
+  max-height: 20px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff; 
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.hero {
+  height: 100vh;
+  background-image: url('https://source.unsplash.com/1600x900/?car');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stapelt menu en logo onder elkaar */
+  }
+
+  .navbar {
+    justify-content: center; /* Centreert menu-items op mobiel */
+    gap: 10px;
+  }
+
+  .logo {
+    margin: 10px 0;
+  }
+}
+
