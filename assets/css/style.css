@@ -1,11 +1,10 @@
-/* Algemene reset */
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-  background-image: url(../img//GT3.jpg);
+  
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -17,19 +16,18 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between; /* Verdeel de items */
-  align-items: center; /* Centreer verticaal */
-  height: 60px; /* Stel de hoogte van de header in */
-  padding: 15px 20px; /* Ruimte aan de zijkanten */
-  background-color: #111; /* Header achtergrondkleur */
+  justify-content: space-between; 
+  align-items: center; 
+  height: 60px; 
+  padding: 15px 20px; 
+  background-color: #111; 
   font-size: 16px;
 }
 
-/* Nieuwe: Menu-icoon */
 .menu-icon {
   display: flex;
   flex-direction: column;
-  gap: 4px; /* Afstand tussen de streepjes */
+  gap: 4px; 
   cursor: pointer;
 }
 
@@ -66,12 +64,12 @@ body {
 
 
 .user-container {
-  position: relative; /* Voor positionering van de tekst */
+  position: relative; 
 }
 
 .user-icon {
   cursor: pointer;
-  transition: filter 0.3s ease; /* Gladde overgang bij hover */
+  transition: filter 0.3s ease; 
 }
 
 .user-icon img {
@@ -81,27 +79,27 @@ body {
 }
 
 .user-icon:hover {
-  filter: brightness(1.5); /* Het icoon wordt lichter bij hover */
+  filter: brightness(1.5); 
 }
 
 .user-text {
   position: absolute;
-  bottom: 10px; /* Zet de tekst onder het icoon */
+  bottom: 10px; 
   left: 60%;
   transform: translateX(-50%);
   font-size: 12px;
   color: white;
-  opacity: 0; /* Begin als onzichtbaar */
-  transition: opacity 0.3s ease; /* Gladde overgang voor verschijnen */
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
 }
 
 .user-icon:hover + .user-text {
-  opacity: 1; /* Maak de tekst zichtbaar bij hover */
+  opacity: 1; 
 }
 
 .hero {
   height: 100vh;
-  background-image: url('https://source.unsplash.com/1600x900/?car');
+  background-image: url(../img//GT3.jpg);
   background-size: cover;
   background-position: center;
   display: block;
@@ -134,3 +132,80 @@ body {
 .cta-button:hover {
   background-color: #444;
 }
+
+.cards-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 30px; 
+  padding: 60px;
+  max-width: 1200px;
+  margin: 0 auto; 
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: white;
+  padding: 20px 20px 20px 20px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; 
+}
+
+.card-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-arrow {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-arrow:hover {
+  transform: scale(1.2);
+  color: #ccc;
+}
+
+.scrollable-content {
+  min-height: 200vh;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.scrollable-content h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.scrollable-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
