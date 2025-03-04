@@ -1,10 +1,11 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  
+
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -16,18 +17,18 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  height: 60px; 
-  padding: 15px 20px; 
-  background-color: #111; 
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 15px 20px;
+  background-color: #111;
   font-size: 16px;
 }
 
 .menu-icon {
   display: flex;
   flex-direction: column;
-  gap: 4px; 
+  gap: 4px;
   cursor: pointer;
 }
 
@@ -57,44 +58,44 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: #fff; 
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
 }
 
 
 .user-container {
-  position: relative; 
+  position: relative;
 }
 
 .user-icon {
   cursor: pointer;
-  transition: filter 0.3s ease; 
+  transition: filter 0.3s ease;
 }
 
 .user-icon img {
-  width: 90px; 
+  width: 90px;
   height: auto;
   margin-right: -15px;
 }
 
 .user-icon:hover {
-  filter: brightness(1.5); 
+  filter: brightness(1.5);
 }
 
 .user-text {
   position: absolute;
-  bottom: 10px; 
+  bottom: 17px;
   left: 60%;
   transform: translateX(-50%);
   font-size: 12px;
   color: white;
-  opacity: 0; 
-  transition: opacity 0.3s ease; 
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.user-icon:hover + .user-text {
-  opacity: 1; 
+.user-icon:hover+.user-text {
+  opacity: 1;
 }
 
 .hero {
@@ -135,20 +136,17 @@ body {
 
 .cards-container {
   display: flex;
-  flex-direction: column; 
-  gap: 30px; 
+  flex-direction: column;
+  gap: 30px;
   padding: 60px;
   max-width: 1200px;
-  margin: 0 auto; 
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  margin: 0 auto;
 }
 
 .card {
   position: relative;
   border-radius: 15px;
-  overflow: hidden; 
+  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -165,11 +163,11 @@ body {
   width: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   color: white;
-  padding: 20px 20px 20px 20px; 
+  padding: 20px 20px 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .card-text {
@@ -204,11 +202,11 @@ body {
 
 .model-card {
   position: relative;
-  width: 700px; 
+  width: 700px;
   max-width: 800px;
   height: 800px;
-  
-  margin: 20px;
+  margin-left: 120px;
+  margin-top: 40px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -223,10 +221,10 @@ body {
 
 .model718-info-top {
   position: absolute;
-  top: 20px;  
-  left: 20px;   
+  top: 20px;
+  left: 20px;
   color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6); 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .model718-info-top h3 {
@@ -236,17 +234,17 @@ body {
 
 .model718-info-top span {
   font-size: 1rem;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 2px 8px;
   border-radius: 4px;
 }
 
 .model911-info-top {
   position: absolute;
-  top: 20px;  
-  left: 20px;   
+  top: 20px;
+  left: 20px;
   color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6); 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 700;
   font-family: Arial, sans-serif;
@@ -262,17 +260,17 @@ body {
 
 .model911-info-top span {
   font-size: 1rem;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 2px 8px;
   border-radius: 4px;
 }
 
 .model-info-top {
   position: absolute;
-  top: 20px;  
-  left: 20px;   
+  top: 20px;
+  left: 20px;
   color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6); 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 700;
   font-family: Arial, sans-serif;
@@ -281,36 +279,34 @@ body {
 .model-info-top h3 {
   font-size: 2rem;
   margin-bottom: 5px;
-   font-family: "Imperial Script", serif;
+  font-family: "Imperial Script", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .model-info-top span {
   font-size: 1rem;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 2px 8px;
   border-radius: 4px;
 }
 
 .model-info-bottom {
   position: absolute;
-  bottom: 0; 
-  left: 0; 
+  bottom: 0;
+  left: 0;
   width: 100%;
   padding: 20px;
   color: #fff;
-  background: linear-gradient(
-    to top, 
-    rgba(0,0,0,0.7), 
-    rgba(0,0,0,0)
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0));
 }
 
 .model-info-bottom p {
   margin-bottom: 15px;
   font-size: 1.4rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .buttons {
@@ -318,7 +314,7 @@ body {
   gap: 10px;
 }
 
-.buttons button {
+.buttons-Left {
   border: none;
   padding: 20px 30px;
   font-size: 1rem;
@@ -329,10 +325,85 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.buttons-Right {
+  border: none;
+  padding: 20px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid rgb(251, 252, 255);
+  background-color: transparent;
+  color: rgb(251, 252, 255);
+  transition: background-color 0.3s ease;
+}
+
 .buttons button:hover {
   background-color: #ddd;
 }
 
+.porsche-card {
+  width: 800px;
+  margin-top: 60px;
+  margin-left: 80px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.porsche-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.porsche-card-content {
+  background: #000;
+  color: white;
+  padding: 40px;
+}
+
+.porsche-card-content h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.porsche-card-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+.porsche-card-content button {
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.porsche-card-content button:hover {
+  background: #ddd;
+}
+
+.footer {
+  margin-top: 80px;
+  display: block;
+  background-color: black;
+  padding: 0px;
+}
+
+.porsche-tekst-footer {
+  font-size: 12px;
+  margin-left: 0px;
+  background: #000;
+  color: white;
+  padding: 40px;
+}
 
 .scrollable-content {
   min-height: 200vh;
@@ -354,3 +425,10 @@ body {
   margin: 0 auto;
 }
 
+
+
+@media screen and (max-width:600px) {
+  section {
+    width: 100%;
+  }
+}
