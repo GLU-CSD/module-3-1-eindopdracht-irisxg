@@ -15,7 +15,7 @@ const cars = [
         brandstof: 'Plug-in hybride',
         kilometerstand: 16406,
         kleur: 'Zwart',
-        image: 'image_url'
+        image: ''
     },
     {
         merk: 'Porsche',

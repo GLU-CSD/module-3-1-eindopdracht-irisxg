@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occasions</title>
+    <link rel="stylesheet" href="assets/css/overzicht.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Filteropties</h2>
+            <form id="filter-form">
+                <div class="filter-group">
+                    <label for="model">Model</label>
+                    <select id="model" name="model">
+                        <option value="alle">Alle Modellen</option>
+                        <option value="718">718/Boxster/Cayman</option>
+                        <option value="911">911</option>
+                        <option value="taycan">Taycan</option>
+                        <option value="panamera">Panamera</option>
+                        <option value="macan">Macan</option>
+                        <option value="cayenne">Cayenne</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="fuel-type">Brandstof</label>
+                    <select id="fuel-type" name="fuel-type">
+                        <option value="benzine">Benzine</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="elektrisch">Elektrisch</option>
+                        <option value="hybride">Hybride</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Prijs (€)</label>
+                    <input type="range" id="price-range" name="price-range" min="0" max="200000" step="1000" value="100000" oninput="updatePriceOutput(this.value)">
+                    <output id="price-output">€100.000</output>
+                </div>
+                <div class="filter-group">
+                    <label for="mileage-range">Kilometerstand (km)</label>
+                    <input type="range" id="mileage-range" name="mileage-range" min="0" max="200000" step="1000" value="50000" oninput="updateMileageOutput(this.value)">
+                    <output id="mileage-output">50.000 km</output>
+                </div>
+                <button type="submit">Toepassen</button>
+            </form>
+        </aside>
+        <main class="main-content">
+            
+        </main>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

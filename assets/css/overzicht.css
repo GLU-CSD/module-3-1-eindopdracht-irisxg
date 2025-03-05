@@ -1,0 +1,157 @@
+/* Algemene stijlen */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-16{
+    font-size: 16px;
+}
+.fs-24{
+    font-size: 24px;
+}
+
+/* Container voor de gehele inhoud */
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1300px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Zijbalk voor filteropties */
+.sidebar {
+    width: 400px; /* Berekend op basis van max breedte */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-group select,
+.filter-group input[type="range"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.filter-group input[type="range"] {
+    width: 95%;
+}
+
+.filter-group output {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/* Hoofdinhoud waar de auto's worden weergegeven */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    align-items: center;
+    max-width: 890px;
+    margin-left: 20px;
+}
+
+/* Stijlen voor de autokaartjes */
+.car-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 890px; /* Maximale breedte voor auto kaartjes */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.car-card img {
+    width: 45%;
+    height: auto;
+}
+
+.car-details {
+    width: 55%;
+    padding: 20px;
+}
+
+.car-details h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.car-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Responsieve aanpassingen */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .car-card {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .car-card img {
+        width: 100%;
+    }
+
+    .car-details {
+        width: 100%;
+        padding: 15px;
+    }
+}
