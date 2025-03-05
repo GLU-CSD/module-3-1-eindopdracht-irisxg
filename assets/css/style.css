@@ -195,6 +195,7 @@ body {
 }
 
 .models-section h2 {
+  margin-left: 400px;
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
@@ -397,12 +398,149 @@ body {
   padding: 0px;
 }
 
+h2 {
+  margin-bottom: 15px;
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
+
 .porsche-tekst-footer {
-  font-size: 12px;
+  font-size: 15px;
   margin-left: 0px;
   background: #000;
   color: white;
   padding: 40px;
+}
+
+.tekst-footer {
+  margin-right: 100px;
+  font-size: 15px;
+  margin-bottom: 30px;
+  background: #000;
+  color: white;
+}
+
+.button-footer {
+  text-decoration: none;
+  border: none;
+  padding: 15px 100px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+}
+
+.button-footer:hover {
+  background-color: #e0e0e0; 
+  color: #000; 
+}
+
+.Flag {
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+.Flag img {
+  width: 30px; 
+  height: auto; 
+}
+
+.midden-footer {
+  margin-top: 50px;
+}
+
+
+.social-media {
+  margin-top: 30px;
+  background-color: #000;
+  color: white;
+}
+
+.social-media h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.social-media .tekst-footer {
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.social-icons a {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 50px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  margin-top: 20px;
+}
+
+.bedrijf {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin-top: 20px;
+}
+
+.bedrijf-item {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+}
+
+
+.footer-bottom {
+  border-top: 1px solid gray;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.6;
+  margin-top: 80px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer; 
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: grey;           
+}
+
+.footer-bottom p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.footer-logo img {
+  width: 200px;
+  height: auto;
 }
 
 .scrollable-content {
