@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "porsch",
+			"path": "../.."
+		},
+		{
+			"name": "car-images",
+			"path": "../../../../../Downloads/porsche/car-images"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "porsch"
+	}
+}
