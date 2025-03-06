@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulier</title>
+    <link rel="stylesheet" href="assets/css/formulier.css">
+</head>
+<body>
+    <form>
+        <h2>Type bestelling</h2>
+        <label><input type="radio" name="type" checked> Particulier</label>
+        <label><input type="radio" name="type"> Zakelijk</label>
+
+        <div class="form-group">
+            <label>Voornaam</label>
+            <input type="text" class="error">
+            <small>Er is geen voornaam ingevuld.</small>
+        </div>
+
+        <div class="form-group">
+            <label>Achternaam</label>
+            <input type="text" class="error">
+            <small>Er is geen achternaam ingevuld.</small>
+        </div>
+
+        <div class="form-group">
+            <label>Postcode</label>
+            <input type="text" class="error">
+            <small>Er is geen postcode ingevuld.</small>
+        </div>
+
+        <div class="form-group">
+            <label>Huisnummer</label>
+            <input type="text" class="error">
+            <small>Er is geen huisnummer ingevuld.</small>
+        </div>
+
+        <div class="form-group">
+            <label>Telefoonnummer</label>
+            <input type="text" class="error">
+            <small>Er is geen telefoonnummer ingevuld.</small>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" checked> Hetzelfde als bezorgadres
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox"> Ja, ik wil aanbiedingen en tips
+        </div>
+
+        <div class="error-box">
+            <p>Een paar velden zijn niet goed ingevuld.</p>
+            <ul>
+                <li>Er is geen voornaam ingevuld.</li>
+                <li>Er is geen achternaam ingevuld.</li>
+                <li>Er is geen postcode ingevuld.</li>
+                <li>Er is geen huisnummer ingevuld.</li>
+                <li>Er is geen telefoonnummer ingevuld.</li>
+            </ul>
+        </div>
+
+        <button type="submit">Versturen</button>
+    </form>
+</body>
+</html>
+
+
+

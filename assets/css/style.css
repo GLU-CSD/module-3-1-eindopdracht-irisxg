@@ -212,6 +212,7 @@ body {
 }
 
 .model-card {
+  border-radius: 15px;
   position: relative;
   width: calc(50% - 20px); 
   height: 800px;  
@@ -349,9 +350,9 @@ body {
 }
 
 .porsche-card {
-  width: 800px;
+  width: 1050px;
   margin-top: 60px;
-  margin-left: 80px;
+  margin-left: 20px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);

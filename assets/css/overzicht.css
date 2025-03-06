@@ -7,13 +7,16 @@ body {
     display: flex;
     justify-content: center;
 }
-.fs-14{
+
+.fs-14 {
     font-size: 14px;
 }
-.fs-16{
+
+.fs-16 {
     font-size: 16px;
 }
-.fs-24{
+
+.fs-24 {
     font-size: 24px;
 }
 
@@ -28,7 +31,7 @@ body {
 
 /* Zijbalk voor filteropties */
 .sidebar {
-    width: 400px; /* Berekend op basis van max breedte */
+    width: 400px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -56,6 +59,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 .filter-group input[type="range"] {
     width: 95%;
 }
@@ -80,7 +84,6 @@ button:hover {
     background-color: #444;
 }
 
-/* Hoofdinhoud waar de auto's worden weergegeven */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -91,13 +94,12 @@ button:hover {
     margin-left: 20px;
 }
 
-/* Stijlen voor de autokaartjes */
 .car-card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 890px; /* Maximale breedte voor auto kaartjes */
+    width: 890px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -115,15 +117,22 @@ button:hover {
 
 .car-details h3 {
     margin-top: 0;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
+.car-details h4 {
+    margin-top: 30px;
+    font-size: 1.4em;
+}
+
+
+
 .car-details p {
+    font-size: 20px;
     margin: 5px 0;
     color: #555;
 }
 
-/* Responsieve aanpassingen */
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
