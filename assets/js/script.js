@@ -1,5 +1,3 @@
-// scripts.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const cars = [
         {
@@ -17,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fuel: 'plug-in hybride',
             price: 167653,
             mileage: 0,
-            image: './assets/car-images/Porsche-Cayenne-E-Hybrid-Coupé-Kwartsiet-Grijs.avif',
+            image: './assets/car-images/Porsche-Cayenne-Grijs.avif',
             description: 'Plug-in hybride | Kwartsiet Grijs Metalllic | Zwart interieur',
             registration: '03/2025',
             owners: 'geen eerdere eigenaar'
@@ -211,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
 
- 
+
     function updateCartCounter() {
         counterText.textContent = cartCount;
         cartCounter.style.display = cartCount > 0 ? 'flex' : 'none';
@@ -220,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCartCounter();
 
     function renderCars(filteredCars = cars) {
-        mainContent.innerHTML = ''; 
+        mainContent.innerHTML = '';
         filteredCars.forEach(car => {
             const carCard = document.createElement('div');
             carCard.className = 'car-card';
@@ -268,25 +266,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             cartButton.addEventListener('click', () => {
-                cartCount++; // Verhoog het aantal
-                localStorage.setItem('cartCount', cartCount); 
-                updateCartCounter(); 
+                cartCount++;
+                localStorage.setItem('cartCount', cartCount);
+                updateCartCounter();
             });
 
-            // Knoppen toevoegen aan container
             buttonContainer.appendChild(detailsButton);
             buttonContainer.appendChild(cartButton);
 
-            // Elementen toevoegen aan carDetails
             carDetails.appendChild(carTitle);
             carDetails.appendChild(carDescription);
             carDetails.appendChild(carMileage);
             carDetails.appendChild(carRegistration);
             carDetails.appendChild(carOwners);
             carDetails.appendChild(carPrice);
-            carDetails.appendChild(buttonContainer); // Knoppen toevoegen
+            carDetails.appendChild(buttonContainer);
 
-            // Card vullen
             carCard.appendChild(carImage);
             carCard.appendChild(carDetails);
 
@@ -295,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     renderCars();
-    
+
 
     function updatePriceOutput(value) {
         document.getElementById('price-output').innerText = '€ ' + parseInt(value).toLocaleString();
@@ -305,12 +300,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('mileage-output').innerText = parseInt(value).toLocaleString() + ' km';
     }
 
-    document.getElementById('price-range').addEventListener('input', function() {
+    document.getElementById('price-range').addEventListener('input', function () {
         updatePriceOutput(this.value);
         filterCars();
     });
 
-    document.getElementById('mileage-range').addEventListener('input', function() {
+    document.getElementById('mileage-range').addEventListener('input', function () {
         updateMileageOutput(this.value);
         filterCars();
     });
@@ -318,8 +313,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('fuel-type').addEventListener('change', filterCars);
     document.getElementById('model').addEventListener('change', filterCars);
 
-    document.getElementById('filter-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Voorkomt dat het formulier reset
+    document.getElementById('filter-form').addEventListener('submit', function (event) {
+        event.preventDefault();
         filterCars();
     });
 
@@ -331,9 +326,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const filteredCars = cars.filter(car => {
             return (selectedfuel === 'all' || car.fuel === selectedfuel) &&
-                   (selectedModel === 'all' || car.model.toLowerCase().includes(selectedModel)) &&
-                   car.price <= maxPrice &&
-                   car.mileage <= maxMileage;
+                (selectedModel === 'all' || car.model.toLowerCase().includes(selectedModel)) &&
+                car.price <= maxPrice &&
+                car.mileage <= maxMileage;
         });
 
         renderCars(filteredCars);
