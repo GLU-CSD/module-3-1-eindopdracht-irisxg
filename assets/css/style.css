@@ -489,7 +489,7 @@ h2 {
 .button-footer {
   text-decoration: none;
   border: none;
-  padding: 15px 100px;
+  padding: 15px 50px;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
@@ -565,7 +565,7 @@ h2 {
 
 .footer-bottom {
   border-top: 1px solid gray;
-  padding: 0px;
+  padding: 0px 15px;
   background-color: black;
   color: white;
   font-size: 14px;
