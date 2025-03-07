@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Occasions</title>
+    <title>Nieuwe en tweedehands Porsche</title>
     <link rel="stylesheet" href="assets/css/overzicht.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.d42ac28-porsche.png">
+    <link rel="icon" sizes="any" href="./assets/img/favicon-porsche.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <a href="overzicht.html">
-          <div class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </a>
         <div class="logo">
-          <img src="./assets/img/Porsche_wordmark_white.png" alt="Porsche Logo">
+            <img src="./assets/img/Porsche_wordmark_white.png" alt="Porsche Logo">
         </div>
         <div class="user-container">
-          <div class="user-icon">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="user-text">Gebruiker</div>
-          <div class="shopping-cart">
-            <span class="cart-counter">
-                <p class="counter-text">0</p>
-            </span>
-            <a href="/formulier.html" target="_blank" title="Ga naar winkelwagen" class="cart-link">
-                <i class="cart-icon fa-solid fa-cart-shopping"></i>
-            </a>
-          </div>
+            <div class="user-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="user-text">Gebruiker</div>
+            <div class="shopping-cart">
+                <span class="cart-counter">
+                    <p class="counter-text">0</p>
+                </span>
+                <a href="/formulier.html" target="_blank" title="Ga naar winkelwagen" class="cart-link">
+                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
         </div>
-      </header>
-      <div class="container">
-        <a target="_self" title="Terug naar homepage" href="index.html" class="btn btn-outline back-to-home">Terug naar home</a>
-      </div>
+    </header>
+    <div class="container">
+        <a target="_self" title="Terug naar homepage" href="index.html" class="btn btn-outline back-to-home">Terug naar
+            home</a>
+    </div>
 
     <div class="overzicht-container">
         <aside class="sidebar">
@@ -65,19 +70,21 @@
                 </div>
                 <div class="filter-group">
                     <label for="price-range">Prijs (€)</label>
-                    <input type="range" id="price-range" name="price-range" min="0" max="200000" step="1000" value="100000" oninput="updatePriceOutput(this.value)">
+                    <input type="range" id="price-range" name="price-range" min="0" max="200000" step="1000"
+                        value="100000" oninput="updatePriceOutput(this.value)">
                     <output id="price-output">€100.000</output>
                 </div>
                 <div class="filter-group">
                     <label for="mileage-range">Kilometerstand (km)</label>
-                    <input type="range" id="mileage-range" name="mileage-range" min="0" max="200000" step="1000" value="50000" oninput="updateMileageOutput(this.value)">
+                    <input type="range" id="mileage-range" name="mileage-range" min="0" max="200000" step="1000"
+                        value="50000" oninput="updateMileageOutput(this.value)">
                     <output id="mileage-output">50.000 km</output>
                 </div>
                 <button type="submit">Toepassen</button>
             </form>
         </aside>
         <main class="main-content">
-            
+
         </main>
     </div>
 
@@ -184,8 +191,10 @@
                     NEDC-cyclus. Dit
                     kan sinds 1 september 2018 resulteren in fiscale wijzigingen, bijvoorbeeld in de
                     motorrijtuigenbelasting en
-                    bijtelling. Meer informatie over de verschillen tussen <a target="_blank" title="Link naar WLTP" href="https://www.porsche.com/netherlands/nl/service/maintenance/wltp/"> WLTP en NEDC vindt u hier.</a>
-                    </p>
+                    bijtelling. Meer informatie over de verschillen tussen <a target="_blank" title="Link naar WLTP"
+                        href="https://www.porsche.com/netherlands/nl/service/maintenance/wltp/"> WLTP en NEDC vindt u
+                        hier.</a>
+                </p>
 
                 <p>*** Belangrijke informatie over de volledig elektrische Porsche modellen kan <a href="#">hier</a>
                     gevonden
@@ -199,4 +208,5 @@
 
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
