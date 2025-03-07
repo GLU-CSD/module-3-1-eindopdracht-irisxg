@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fuel: 'plug-in hybride',
             price: 167653,
             mileage: 0,
-            image: './assets/car-images/Porsche-Cayenne-E-Hybrid-Coupé-Kwartsiet-Grijs.avif',
+            image: './assets/car-images/Porsche-Cayenne-E-Hybrid-Coupé-Kwartsiet-Grijs.avif',
             description: 'Plug-in hybride | Kwartsiet Grijs Metalllic | Zwart interieur',
             registration: '03/2025',
             owners: 'geen eerdere eigenaar'
