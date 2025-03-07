@@ -1,50 +1,86 @@
-document.getElementById('bestelForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+document.getElementById("bestelForm").addEventListener("submit", function (event) {
+    event.preventDefault(); 
 
     let isValid = true;
-    let fields = ['voornaam', 'achternaam', 'straatnaam', 'huisnummer', 'postcode', 'land', 'email', 'telefoonnummer', 'geboortedatum'];
+    let errorList = document.getElementById("error-list");
+    errorList.innerHTML = ""; 
 
-    fields.forEach(function (field) {
-        let input = document.getElementById(field);
-        let errorSpan = input.nextElementSibling;
+    // Alle verplichte velden (tussenvoegsel blijft optioneel)
+    let velden = ["aanhef", "voornaam", "achternaam", "email", "geboortedatum", "straat", "postcode", "huisnummer", "telefoonnummer", "land"];
 
-        if (!input.value.trim()) {
-            input.classList.add('invalid');
+    velden.forEach(veld => {
+        let input = document.getElementById(veld);
+        let errorMessage = input.nextElementSibling;
 
-            if (!errorSpan || !errorSpan.classList.contains('errorMessage')) {
-                errorSpan = document.createElement('span');
-                errorSpan.classList.add('errorMessage');
-                input.parentNode.insertBefore(errorSpan, input.nextSibling);
-            }
-            errorSpan.textContent = `${input.name.charAt(0).toUpperCase() + input.name.slice(1)} is verplicht`;
+        if (input.value.trim() === "") {
+            input.classList.add("error");
+            errorMessage.style.display = "block";
+            errorList.innerHTML += `<li>${errorMessage.innerText}</li>`;
             isValid = false;
         } else {
-            input.classList.remove('invalid');
-            if (errorSpan) {
-                errorSpan.textContent = '';
-            }
+            input.classList.remove("error");
+            errorMessage.style.display = "none";
         }
     });
 
-    // Algemene voorwaarden checkbox
-    let voorwaarden = document.getElementById('voorwaarden');
-    let voorwaardenError = voorwaarden.nextElementSibling;
+    // Extra controle voor e-mail (moet een geldig e-mailadres zijn)
+    let email = document.getElementById("email");
+    let emailError = email.nextElementSibling;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simpele e-mail validatie
+
+    if (!emailRegex.test(email.value.trim())) {
+        email.classList.add("error");
+        emailError.style.display = "block";
+        errorList.innerHTML += `<li>Voer een geldig e-mailadres in.</li>`;
+        isValid = false;
+    } else {
+        email.classList.remove("error");
+        emailError.style.display = "none";
+    }
+
+    // Extra controle voor geboortedatum (moet een geldige datum zijn)
+    let geboortedatum = document.getElementById("geboortedatum");
+    let geboortedatumError = geboortedatum.nextElementSibling;
+
+    if (isNaN(Date.parse(geboortedatum.value))) {
+        geboortedatum.classList.add("error");
+        geboortedatumError.style.display = "block";
+        errorList.innerHTML += `<li>Voer een geldige geboortedatum in.</li>`;
+        isValid = false;
+    } else {
+        geboortedatum.classList.remove("error");
+        geboortedatumError.style.display = "none";
+    }
+
+    // Controleer of de algemene voorwaarden zijn geaccepteerd
+    let voorwaarden = document.getElementById("voorwaarden");
+    let voorwaardenError = voorwaarden.nextElementSibling.nextElementSibling;
 
     if (!voorwaarden.checked) {
-        if (!voorwaardenError || !voorwaardenError.classList.contains('errorMessage')) {
-            voorwaardenError = document.createElement('span');
-            voorwaardenError.classList.add('errorMessage');
-            voorwaarden.parentNode.insertBefore(voorwaardenError, voorwaarden.nextSibling);
-        }
-        voorwaardenError.textContent = 'Je moet akkoord gaan met de algemene voorwaarden';
+        voorwaardenError.style.display = "block";
+        errorList.innerHTML += `<li>${voorwaardenError.innerText}</li>`;
         isValid = false;
-    } else if (voorwaardenError) {
-        voorwaardenError.textContent = '';
+    } else {
+        voorwaardenError.style.display = "none";
     }
+
+    // Toon of verberg het foutbericht
+    document.getElementById("error-box").classList.toggle("hidden", isValid);
 
     if (isValid) {
-        alert("Formulier succesvol verzonden!");
-        event.target.reset();
+        let nieuwsbrief = document.getElementById("nieuwsbrief").checked;
+        alert("Formulier is succesvol verzonden!" + (nieuwsbrief ? "\nJe bent ingeschreven voor de nieuwsbrief." : ""));
     }
+
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const cartCounter = document.querySelector('.cart-counter');
+    const counterText = document.querySelector('.counter-text');
+    let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
+    function updateCartCounter() {
+        counterText.textContent = cartCount;
+        cartCounter.style.display = cartCount > 0 ? 'flex' : 'none';
+    }
+    updateCartCounter();
+});
