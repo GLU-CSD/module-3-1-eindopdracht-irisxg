@@ -17,168 +17,189 @@ body {
 .fs-24 {
   font-size: 24px;
 }
+
 .container {
-display: flex;
-flex-direction: row;
-max-width: 1300px;
-width: 90%;
-padding: 20px;
-margin: 0 auto; 
-padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  max-width: 1300px;
+  width: 90%;
+  padding: 20px;
+  margin: 0 auto;
+  padding-bottom: 10px;
 }
-.back-to-home{
-display: block;
-margin-top: 20px;
-margin-bottom: 20px;
-max-width: 150px;
-margin: 0;
-text-decoration: none;
+
+.back-to-home {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 150px;
+  margin: 0;
+  text-decoration: none;
 }
+
 .header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-height: 70px;
-padding: 15px 20px;
-background-color: #111;
-font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 15px 20px;
+  background-color: #111;
+  font-size: 16px;
 }
-.user-container{
-display: flex;
-}
-.shopping-cart{
-position: relative;
-top: 1px;
-}
-.cart-icon  {
-margin-top: 10px;
-margin-bottom: 40px;
-color: white;
-font-size: 26px;
-text-decoration: none;
-transition: color 0.3s ease;
-position: relative;
-z-index: 1;
-}
-.cart-link{
-cursor: pointer;
-}
-.cart-counter{
-width: 18px;
-height: 18px;
-border-radius: 100%;
-background-color: red;
-color: black;
-position: absolute;
-top: 0px;
-left: 14px;
-text-align: center;
-z-index: 10;
-display: none;
-}
-.counter-text{
-position: relative;
-font-size: 12px;
-z-index: 15;
-color: white;
-top: -11px;
-left: 6px;
-}
-.menu-icon {
-display: flex;
-flex-direction: column;
-gap: 4px;
-cursor: pointer;
-}
-.menu-icon span {
-display: block;
-width: 25px;
-height: 2px;
-background-color: white;
-transition: background-color 0.3s ease;
-}
-.menu-icon:hover span {
-background-color: #ccc;
-}
-.logo img {
-height: auto;
-max-width: 100%;
-margin-left: 70px;
-max-width: 270px;
-}
-.navbar {
-display: flex;
-gap: 15px;
-}
-.navbar a {
-text-decoration: none;
-color: #fff;
-font-size: 16px;
-font-weight: bold;
-}
+
 .user-container {
-position: relative;
-top: 5px;
+  display: flex;
 }
+
+.shopping-cart {
+  position: relative;
+  top: 1px;
+}
+
+.cart-icon {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.cart-link {
+  cursor: pointer;
+}
+
+.cart-counter {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: red;
+  color: black;
+  position: absolute;
+  top: 0px;
+  left: 14px;
+  text-align: center;
+  z-index: 10;
+  display: none;
+}
+
+.counter-text {
+  position: relative;
+  font-size: 12px;
+  z-index: 15;
+  color: white;
+  top: -11px;
+  left: 6px;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.menu-icon:hover span {
+  background-color: #ccc;
+}
+
+.logo img {
+  height: auto;
+  max-width: 100%;
+  margin-left: 70px;
+  max-width: 270px;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-container {
+  position: relative;
+  top: 5px;
+}
+
 .user-icon {
-cursor: pointer;
-transition: filter 0.3s ease;
+  cursor: pointer;
+  transition: filter 0.3s ease;
 }
+
 .user-icon i {
-margin-top: 10px;
-margin-bottom: 40px;
-color: white;
-font-size: 26px;
-text-decoration: none;
-transition: color 0.3s ease;
-position: relative;
-z-index: 1;
-margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+  margin-right: 20px;
 }
+
 .user-icon:hover {
-filter: brightness(1.5);
+  filter: brightness(1.5);
 }
+
 .user-text {
-position: absolute;
-bottom: 17px;
-left: 12px;
-transform: translateX(-50%);
-font-size: 12px;
-color: white;
-opacity: 1;
-transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 17px;
+  left: 12px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
+
 .user-icon:hover+.user-text {
-opacity: 1;
+  opacity: 1;
 }
 
 .overzicht-container {
-display: flex;
-flex-direction: row;
-max-width: 1300px;
-width: 90%;
-padding: 20px;
-margin: 0 auto; 
+  display: flex;
+  flex-direction: row;
+  max-width: 1300px;
+  width: 90%;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 .sidebar {
-flex: 0 0 300px; 
-background-color: #fff;
-padding: 20px;
-border-radius: 8px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 0 0 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Main-content naast de sidebar houden */
 .main-content {
-flex-grow: 1; 
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 20px;
-align-items: flex-start;
-max-width: calc(100% - 320px);
-margin-left: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: calc(100% - 320px);
+  margin-left: 20px;
 }
 
 .sidebar h2 {
@@ -270,42 +291,40 @@ button:hover {
 
 
 .button-container {
-display: flex;
-gap: 10px;
-margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .btn {
-padding: 12px 16px;
-font-size: 14px;
-font-weight: bold;
-border-radius: 4px;
-cursor: pointer;
-transition: all 0.3s ease;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-background-color: black;
-color: white;
-border: none;
+  background-color: black;
+  color: white;
+  border: none;
 }
 
 .btn-primary:hover {
-background-color: #333;
+  background-color: #333;
 }
 
 .btn-outline {
-background-color: transparent;
-color: black;
-border: 2px solid black;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
 }
 
 .btn-outline:hover {
-background-color: black;
-color: white;
+  background-color: black;
+  color: white;
 }
-
-
 
 .footer {
   margin-top: 80px;
@@ -316,9 +335,9 @@ color: white;
 
 h2 {
   margin-bottom: 15px;
-  display: flex; 
-  align-items: center; 
-  gap: 10px; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .porsche-tekst-footer {
@@ -328,10 +347,12 @@ h2 {
   color: white;
   padding: 40px;
 }
-.newsletter-container{
+
+.newsletter-container {
   flex-direction: row;
   display: flex;
 }
+
 .tekst-footer {
   margin-right: 100px;
   font-size: 15px;
@@ -353,19 +374,19 @@ h2 {
 }
 
 .button-footer:hover {
-  background-color: #e0e0e0; 
-  color: #000; 
+  background-color: #e0e0e0;
+  color: #000;
 }
 
 .Flag {
-  display: flex; 
-  align-items: center; 
-  gap: 10px; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .Flag img {
-  width: 30px; 
-  height: auto; 
+  width: 30px;
+  height: auto;
 }
 
 .midden-footer {
@@ -401,7 +422,7 @@ h2 {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-  
+
 .bedrijf {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -431,12 +452,12 @@ h2 {
 .footer-bottom a {
   color: white;
   text-decoration: underline;
-  cursor: pointer; 
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .footer-bottom a:hover {
-  color: grey;           
+  color: grey;
 }
 
 .footer-bottom p {
@@ -459,63 +480,64 @@ h2 {
 
 
 @media (max-width: 1024px) {
-.overzicht-container {
-    flex-direction: column; 
+  .overzicht-container {
+    flex-direction: column;
     align-items: center;
-}
+  }
 
-.sidebar {
+  .sidebar {
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
-}
+  }
 
-.main-content {
+  .main-content {
     max-width: 100%;
     margin-left: 0;
-}
+  }
 }
 
 @media (max-width: 768px) {
-.car-card {
+  .car-card {
     flex-direction: column;
     width: 100%;
-}
+  }
 
-.car-card img {
+  .car-card img {
     width: 100%;
-}
+  }
 
-.car-details {
+  .car-details {
     width: 100%;
     padding: 15px;
-}
+  }
 
-.logo img {
+  .logo img {
     height: auto;
     max-width: 100%;
     margin-left: 35px;
     width: 178px;
-}
+  }
 
-.user-container {
+  .user-container {
     position: relative;
     top: 12px;
-}
+  }
 
-.user-icon i {
+  .user-icon i {
     font-size: 20px;
-}
+  }
 
-.cart-icon {
+  .cart-icon {
     font-size: 20px;
-}
+  }
 
-.overzicht-container {
+  .overzicht-container {
     width: 90%;
-}
-.newsletter-container{
-  flex-direction: column;
-  display: flex;
-}
+  }
+
+  .newsletter-container {
+    flex-direction: column;
+    display: flex;
+  }
 }

@@ -1,9 +1,9 @@
 document.getElementById("bestelForm").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     let isValid = true;
     let errorList = document.getElementById("error-list");
-    errorList.innerHTML = ""; 
+    errorList.innerHTML = "";
 
     // Alle verplichte velden (tussenvoegsel blijft optioneel)
     let velden = ["aanhef", "voornaam", "achternaam", "email", "geboortedatum", "straat", "postcode", "huisnummer", "telefoonnummer", "land"];
@@ -64,7 +64,6 @@ document.getElementById("bestelForm").addEventListener("submit", function (event
         voorwaardenError.style.display = "none";
     }
 
-    // Toon of verberg het foutbericht
     document.getElementById("error-box").classList.toggle("hidden", isValid);
 
     if (isValid) {
