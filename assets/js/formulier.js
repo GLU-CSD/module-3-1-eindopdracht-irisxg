@@ -5,7 +5,7 @@ document.getElementById("bestelForm").addEventListener("submit", function (event
     let errorList = document.getElementById("error-list");
     errorList.innerHTML = "";
 
-    // Alle verplichte velden (tussenvoegsel blijft optioneel)
+    
     let velden = ["aanhef", "voornaam", "achternaam", "email", "geboortedatum", "straat", "postcode", "huisnummer", "telefoonnummer", "land"];
 
     velden.forEach(veld => {
@@ -23,10 +23,10 @@ document.getElementById("bestelForm").addEventListener("submit", function (event
         }
     });
 
-    // Extra controle voor e-mail (moet een geldig e-mailadres zijn)
+    // controle voor e-mail (moet een geldig e-mailadres zijn)
     let email = document.getElementById("email");
     let emailError = email.nextElementSibling;
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simpele e-mail validatie
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email.value.trim())) {
         email.classList.add("error");
@@ -38,7 +38,7 @@ document.getElementById("bestelForm").addEventListener("submit", function (event
         emailError.style.display = "none";
     }
 
-    // Extra controle voor geboortedatum (moet een geldige datum zijn)
+    // -controle voor geboortedatum 
     let geboortedatum = document.getElementById("geboortedatum");
     let geboortedatumError = geboortedatum.nextElementSibling;
 
